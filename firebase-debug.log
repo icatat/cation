@@ -1,0 +1,41 @@
+[debug] [2021-12-27T01:45:17.071Z] ----------------------------------------------------------------------
+[debug] [2021-12-27T01:45:17.073Z] Command:       /usr/local/Cellar/node/14.2.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2021-12-27T01:45:17.074Z] CLI Version:   10.0.1
+[debug] [2021-12-27T01:45:17.074Z] Platform:      darwin
+[debug] [2021-12-27T01:45:17.074Z] Node Version:  v14.2.0
+[debug] [2021-12-27T01:45:17.075Z] Time:          Sun Dec 26 2021 20:45:17 GMT-0500 (Eastern Standard Time)
+[debug] [2021-12-27T01:45:17.075Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-12-27T01:45:17.140Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-12-27T01:45:17.140Z] > authorizing via signed-in user (icatateo@gmail.com)
+[debug] [2021-12-27T01:45:17.141Z] [iam] checking project cation-page for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2021-12-27T01:45:17.143Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/cation-page:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2021-12-27T01:45:17.347Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 27 Dec 2021 01:45:17 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=124","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-27T01:45:17.349Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/cation-page/serviceAccounts/cation-page@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-12-27T01:45:17.484Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 27 Dec 2021 01:45:17 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-27T01:45:17.485Z] > refreshing access token with scopes: []
+[debug] [2021-12-27T01:45:17.486Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-27T01:45:17.572Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Mon, 27 Dec 2021 01:45:17 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-27T01:45:17.608Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cation-page [none]
+[debug] [2021-12-27T01:45:18.089Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cation-page 200
+[debug] [2021-12-27T01:45:18.089Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cation-page {"projectId":"cation-page","projectNumber":"17626151667","displayName":"cation-page","name":"projects/cation-page","resources":{"hostingSite":"cation-page","realtimeDatabaseInstance":"cation-page-default-rtdb"},"state":"ACTIVE"}
+[debug] [2021-12-27T01:45:18.090Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cation-page [none]
+[debug] [2021-12-27T01:45:18.350Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cation-page 200
+[debug] [2021-12-27T01:45:18.350Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cation-page {"projectId":"cation-page","projectNumber":"17626151667","displayName":"cation-page","name":"projects/cation-page","resources":{"hostingSite":"cation-page","realtimeDatabaseInstance":"cation-page-default-rtdb"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'cation-page'...
+[info] 
+[info] i  deploying database, functions, hosting 
+[debug] [2021-12-27T01:45:18.424Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at validateString (internal/validators.js:121:11)
+    at Object.join (path.js:1039:7)
+    at Config.path (/usr/local/lib/node_modules/firebase-tools/lib/config.js:115:45)
+    at getChildEnvironment (/usr/local/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:50:49)
+    at runTargetCommands (/usr/local/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:71:14)
+    at /usr/local/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:122:24
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[error] 
+[error] Error: An unexpected error has occurred.
