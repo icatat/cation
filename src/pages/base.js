@@ -4,14 +4,16 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import StickyFooter from '../components/footer';
-import { MuiThemeProvider } from '@material-ui/core/styles';
 import cation_theme from '../theme.js';
+import { ThemeProvider } from '@mui/material/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
-export default function Base() {
+export default function Base(props) {
   return (
-    <MuiThemeProvider theme={cation_theme}>
+    <Container>
       <CssBaseline />
+      {props.children}
       <StickyFooter />
-    </MuiThemeProvider>
+    </Container>
   );
 }

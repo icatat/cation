@@ -9,7 +9,7 @@ import cation_theme from '../theme.js';
 
 function Copyright() {
   return (
-    <Typography variant='body2'>
+    <Typography>
       {'Designed By  '}
       <Link color='inherit' href='https://cation.me/'>
         cation ©
@@ -19,24 +19,28 @@ function Copyright() {
     </Typography>
   );
 }
-const useStyles = makeStyles((cation_theme) => ({
-  footer: {
-    backgroundColor: cation_theme.palette.primary.main,
-    color: cation_theme.palette.text.secondary,
-  },
-}));
-
+// const useStyles = makeStyles((theme) => ({
+//   footer: {
+//     backgroundColor: theme.palette.primary.main,
+//     color: theme.palette.text.secondary,
+//   },
+// }));
 export default function StickyFooter() {
-  const classes = useStyles();
+  const classes = () => ({
+    footer: {
+      backgroundColor: cation_theme.palette.primary.main,
+      color: cation_theme.palette.text.secondary,
+    },
+  });
+
   return (
     <Box
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        minHeight: '100vh',
+        height: '100vh',
       }}
     >
-      <CssBaseline />
       <Box
         className={classes.footer}
         sx={{
@@ -45,8 +49,8 @@ export default function StickyFooter() {
           mt: 'auto',
         }}
       >
-        <Container className={classes.footer} maxWidth='sm'>
-          <Typography variant='body1'>All work is my own.</Typography>
+        <Container maxWidth='sm'>
+          <Typography>All work is my own.</Typography>
           <Copyright />
         </Container>
       </Box>

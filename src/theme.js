@@ -2,7 +2,7 @@ import { createTheme } from '@mui/material/styles';
 
 const cation_theme = createTheme({
   palette: {
-    type: 'light',
+    type: 'dark',
     primary: {
       main: '#212121',
     },
@@ -50,12 +50,15 @@ const cation_theme = createTheme({
     },
     fontWeightLight: 400,
     subtitle1: {
+      fontFamily: 'Gwendolyn',
       fontWeight: 500,
     },
     h4: {
+      fontFamily: 'Gwendolyn',
       fontWeight: 500,
     },
     h5: {
+      fontFamily: 'Gwendolyn',
       fontWeight: 500,
     },
   },
