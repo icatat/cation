@@ -1,17 +1,31 @@
 import { useState, useEffect } from 'react';
 import { projectFirestore, projectStorage } from '../firebase/conf';
-import { doc, collection, query, where, onSnapshot } from 'firebase/firestore';
+import {
+  doc,
+  collection,
+  query,
+  where,
+  onSnapshot,
+  orderBy,
+} from 'firebase/firestore';
 
 const useFirestore = (collectionName) => {
   const [docs, setDocs] = useState([]);
 
   useEffect(() => {
-    const q = query(collection(projectFirestore, collectionName));
+    const q = query(
+      collection(projectFirestore, collectionName),
+      orderBy('year')
+    );
 
     const unsub = onSnapshot(q, (querySnapshot) => {
-      let documents = [];
+      let documents = {};
       querySnapshot.forEach((doc) => {
-        documents.push({ ...doc.data(), id: doc.id });
+        if (documents[doc.data().year]) {
+          documents[doc.data().year].push({ ...doc.data(), id: doc.id });
+        } else {
+          documents[doc.data().year] = [{ ...doc.data(), id: doc.id }];
+        }
       });
       setDocs(documents);
     });

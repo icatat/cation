@@ -18,6 +18,7 @@ export default function Base(props) {
           minHeight: '100vh',
         }}
       >
+        <CssBaseline />
         {props.children}
       </Box>
       <StickyFooter />

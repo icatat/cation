@@ -35,7 +35,6 @@ export default function MyApp({ Component, pageProps }) {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
       <ThemeProvider theme={cation_theme}>
-        <CssBaseline />
         <Component {...pageProps} />
       </ThemeProvider>
     </React.Fragment>

@@ -4,10 +4,20 @@ import Container from '@mui/material/Container';
 import HorizontalNavigator from '../components/navigation.js';
 import StickyFooter from '../components/footer';
 
+var titleNavContainer = {
+  display: 'flex',
+  margin: '0px',
+  padding: '0px',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '50px',
+};
 export default function Contact() {
   return (
     <Base>
-      <HorizontalNavigator />
+      <Box style={titleNavContainer}>
+        <HorizontalNavigator />
+      </Box>
     </Base>
   );
 }
