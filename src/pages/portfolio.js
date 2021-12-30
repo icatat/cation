@@ -11,7 +11,7 @@ import Gallery from '../components/gallery';
 export default function Portfolio() {
   return (
     <Base>
-      <HorizontalNavigator />
+      <HorizontalNavigator theme={cation_theme} />
       <Gallery></Gallery>
     </Base>
   );

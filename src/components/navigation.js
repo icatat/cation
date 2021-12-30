@@ -3,11 +3,20 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button';
+import cation_theme from '../theme.js';
+import { makeStyles } from '@material-ui/core/styles';
 
-export default function HorizontalNavigator() {
+var navigation = {
+  color: cation_theme.palette.secondary.main,
+};
+export default function HorizontalNavigator(props) {
   return (
     <Box>
-      <ButtonGroup variant='text' aria-label='text button group'>
+      <ButtonGroup
+        style={navigation}
+        variant='text'
+        aria-label='text button group'
+      >
         <Button href='/'>Main</Button>
         <Button href='/about'>About</Button>
         <Button href='/portfolio'>Portfolio</Button>

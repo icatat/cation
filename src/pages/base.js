@@ -10,10 +10,17 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default function Base(props) {
   return (
-    <Container>
-      <CssBaseline />
-      {props.children}
+    <div>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: '100vh',
+        }}
+      >
+        {props.children}
+      </Box>
       <StickyFooter />
-    </Container>
+    </div>
   );
 }

@@ -19,30 +19,16 @@ function Copyright() {
     </Typography>
   );
 }
-// const useStyles = makeStyles((theme) => ({
-//   footer: {
-//     backgroundColor: theme.palette.primary.main,
-//     color: theme.palette.text.secondary,
-//   },
-// }));
+var footer = {
+  color: cation_theme.palette.text.secondary,
+  backgroundColor: cation_theme.palette.primary.main,
+};
 export default function StickyFooter() {
-  const classes = () => ({
-    footer: {
-      backgroundColor: cation_theme.palette.primary.main,
-      color: cation_theme.palette.text.secondary,
-    },
-  });
-
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        height: '100vh',
-      }}
-    >
+    <div>
+      <CssBaseline />
       <Box
-        className={classes.footer}
+        style={footer}
         sx={{
           py: 3,
           px: 2,
@@ -54,6 +40,6 @@ export default function StickyFooter() {
           <Copyright />
         </Container>
       </Box>
-    </Box>
+    </div>
   );
 }

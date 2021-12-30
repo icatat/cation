@@ -13,11 +13,16 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
+var cardStyle = {
+  display: 'block',
+  width: '80vw',
+};
+
 export default function About() {
   return (
     <Base>
       <HorizontalNavigator />
-      <Card>
+      <Card style={cardStyle}>
         <CardContent>
           <CardMedia
             component='img'

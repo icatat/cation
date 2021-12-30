@@ -2,7 +2,7 @@ import { createTheme } from '@mui/material/styles';
 
 const cation_theme = createTheme({
   palette: {
-    type: 'dark',
+    type: 'light',
     primary: {
       main: '#212121',
     },
