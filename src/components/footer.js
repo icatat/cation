@@ -6,6 +6,17 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import cation_theme from '../theme.js';
+import Paper from '@mui/material/Paper';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import IconButton from '@mui/material/IconButton';
+
+function openLink(e, link) {
+  window.location = link;
+  e.preventDefault();
+}
 
 function Copyright() {
   return (
@@ -15,7 +26,7 @@ function Copyright() {
         cation ©
       </Link>{' '}
       {new Date().getFullYear()}
-      {'.'}
+      {'. All work is my own.'}
     </Typography>
   );
 }
@@ -30,14 +41,53 @@ export default function StickyFooter() {
       <Box
         style={footer}
         sx={{
-          py: 3,
-          px: 2,
+          // py: 3,
+          // px: 2,
           mt: 'auto',
         }}
       >
         <Container maxWidth='sm'>
-          <Typography>All work is my own.</Typography>
           <Copyright />
+
+          <IconButton
+            onClick={(e) => {
+              openLink(
+                e,
+                'https://www.linkedin.com/in/catalina-ionescu-848618113/'
+              );
+            }}
+            color='info'
+            fontSize='small'
+          >
+            <LinkedInIcon />
+          </IconButton>
+          <IconButton
+            onClick={(e) => {
+              openLink(e, 'https://github.com/icatat');
+            }}
+            color='info'
+            fontSize='small'
+          >
+            <GitHubIcon />
+          </IconButton>
+          <IconButton
+            onClick={(e) => {
+              openLink(e, 'https://www.instagram.com/cation.art/?hl=en');
+            }}
+            color='info'
+            fontSize='small'
+          >
+            <InstagramIcon />
+          </IconButton>
+          <IconButton
+            onClick={(e) => {
+              openLink(e, 'mailto:icatateo@gmail.com');
+            }}
+            color='info'
+            fontSize='small'
+          >
+            <AlternateEmailIcon />
+          </IconButton>
         </Container>
       </Box>
     </div>

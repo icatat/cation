@@ -20,7 +20,6 @@ export default function HorizontalNavigator(props) {
         <Button href='/'>Main</Button>
         <Button href='/about'>About</Button>
         <Button href='/portfolio'>Portfolio</Button>
-        <Button href='/contact'>Contact</Button>
       </ButtonGroup>
     </Box>
   );

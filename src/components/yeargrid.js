@@ -18,7 +18,7 @@ export default function YearGrid(props) {
   return (
     <Grid container spacing={2}>
       {artworks.map((doc) => (
-        <Grid key={doc.id} item xs={3} md={3} lg={3}>
+        <Grid key={doc.id} item xs={12} md={6} lg={4}>
           <Card>
             <CardContent>
               <CardMedia component='img' src={doc.url}></CardMedia>

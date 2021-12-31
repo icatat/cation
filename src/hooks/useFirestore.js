@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { projectFirestore, projectStorage } from '../firebase/conf';
+import { getStorage, ref, getDownloadURL } from 'firebase/storage';
 import {
   doc,
   collection,
@@ -22,6 +23,14 @@ const useFirestore = (collectionName) => {
       let documents = {};
 
       querySnapshot.forEach((doc) => {
+        doc.data()['url'] = getDownloadURL(
+          ref(projectStorage, 'AliceInWonderland.png')
+        );
+        var link = '';
+        getDownloadURL(
+          ref(projectStorage, 'AliceInWonderland.png')
+        ).then((url) => console.log(url));
+        console.log(link);
         if (documents[doc.data().year]) {
           documents[doc.data().year].push({ ...doc.data(), id: doc.id });
         } else {

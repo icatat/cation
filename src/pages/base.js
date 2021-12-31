@@ -19,6 +19,7 @@ export default function Base(props) {
         }}
       >
         <CssBaseline />
+
         {props.children}
       </Box>
       <StickyFooter />
