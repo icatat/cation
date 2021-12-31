@@ -55,19 +55,22 @@ var main = {
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
-  minHeight: '100vh',
-  backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/cation-page.appspot.com/o/Test_Two.jpg?alt=media&token=8803e14b-077f-459c-87a8-b9fed3e2f1e4')`,
 };
 
 var text = {
-  color: cation_theme.palette.text.secondary,
-  fontSize: '18px',
-  fontWeight: '900',
+  fontSize: '16px',
 };
 
-var paper = {
-  backgroundColor: 'transparent',
+var bottomtext = {
+  justifyContent: 'center',
+  fontSize: '18px',
+  color: cation_theme.palette.secondary.main,
+  fontWeight: '900',
+  alignItems: 'center',
+  display: 'flex',
 };
+
+var paper = {};
 
 export default function About() {
   return (
@@ -76,7 +79,7 @@ export default function About() {
         <Card style={main}>
           <CardContent style={cardStyleMedia}>
             <Grid container style={cardStyle}>
-              <Grid item xs={5} md={5} lg={5}>
+              <Grid item xs={12} md={5} lg={5}>
                 <Paper elevation={0} style={paper}>
                   <Container>
                     <Typography style={text}>
@@ -106,11 +109,20 @@ export default function About() {
                   </Container>
                 </Paper>
               </Grid>
-              <Grid item xs={7} md={7} lg={7}></Grid>
+              <Grid item xs={12} md={7} lg={7}>
+                <CardMedia
+                  component='img'
+                  src='https://firebasestorage.googleapis.com/v0/b/cation-page.appspot.com/o/Test_Two.jpg?alt=media&token=8803e14b-077f-459c-87a8-b9fed3e2f1e4'
+                ></CardMedia>
+              </Grid>
             </Grid>
           </CardContent>
         </Card>
-        <Typography>Wanna know more? Good. Stick around.</Typography>
+        <Container>
+          <Typography style={bottomtext}>
+            Wanna know more? Stick around.
+          </Typography>
+        </Container>
       </Container>
     </CommonBase>
   );
