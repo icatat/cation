@@ -13,6 +13,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
 import YearGrid from './yeargrid';
+import Step from '@mui/material/Step';
+import StepLabel from '@mui/material/StepLabel';
+import StepContent from '@mui/material/StepContent';
 
 const useStyles = makeStyles(() => ({
   gallery: {
@@ -34,6 +37,7 @@ var yearStyle = {
 export default function Gallery() {
   const { docs } = useFirestore('artwork');
   const docsKeys = Object.keys(docs);
+  docsKeys.reverse();
   const classes = useStyles();
 
   return docsKeys.map((year) => (

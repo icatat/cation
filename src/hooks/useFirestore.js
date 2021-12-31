@@ -15,11 +15,12 @@ const useFirestore = (collectionName) => {
   useEffect(() => {
     const q = query(
       collection(projectFirestore, collectionName),
-      orderBy('year')
+      orderBy('year', 'desc')
     );
 
     const unsub = onSnapshot(q, (querySnapshot) => {
       let documents = {};
+
       querySnapshot.forEach((doc) => {
         if (documents[doc.data().year]) {
           documents[doc.data().year].push({ ...doc.data(), id: doc.id });
